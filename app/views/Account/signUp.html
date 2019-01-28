@@ -1,0 +1,51 @@
+#{extends 'Login_main.html' /}
+
+<div id="login-page">
+    <div class="container">
+        <h1>&{'secure.title'}</h1>
+
+        <form class="form-login" action="@{Account.createAccount()}" method="post">
+
+            <h2 class="form-login-heading">Inscrivez vous</h2>
+        #{if flash.error}
+            <p class="error">
+            ${messages.get(flash.error)}
+            </p>
+        #{/if}
+        #{if flash.success}
+            <p class="success">
+            ${messages.get(flash.success)}
+            </p>
+        #{/if}
+            <div class="login-wrap">
+
+                <input type="email" class="form-control" placeholder="Psoedo" name="username" id="username" value="${flash.username}" autofocus>
+                <br>
+                <input type="password" class="form-control" placeholder="Mot de passe" type="password" name="password" id="password" value="">
+               <br>
+                <input type="password" class="form-control" placeholder="Confirmation de mot de passe" type="password" name="conf_password" id="Conf_password" value="">
+                <hr>
+                <select class="form-control" name="personne" id="personne" >
+                    <option value="teacher">Encadreur</option>
+                    <option value="parent">Parent</option>
+                </select>
+                <label class="checkbox">
+		                <span class="pull-right">
+
+		                </span>
+                </label>
+                <button class="btn btn-theme btn-block" href="" type="submit"><i class="fa fa-lock"></i> CONNEXION</button>
+                <hr>
+
+                <div class="login-social-link centered">
+                    <p>Se connecter avec les réseaux sociaux?</p>
+                    <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+                    <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
