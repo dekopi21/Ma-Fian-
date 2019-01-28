@@ -27,10 +27,10 @@ public class Account extends CRUD {
         // Mark user as connected
         session.put("username", username);
         if(personne.equals("techer"))
-            new CompteUtilisateur(username,password,true,false,false).save();
+            new CompteUtilisateur(username,password,true).save();
         else
             if(personne.equals("parent"))
-                new CompteUtilisateur(username,password,false,true,false).save();
+                new CompteUtilisateur(username,password,false).save();
 
         // Remember if needed
         // Redirect to the original URL (or /)
@@ -65,6 +65,8 @@ public class Account extends CRUD {
         }
     }
 
-
+private int pop(){
+        return 0;
+}
 
 }
