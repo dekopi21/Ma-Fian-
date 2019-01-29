@@ -8,10 +8,21 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Account extends CRUD {
 
+    /**
+     * methode to invoke the page for compte creation
+     */
     public static void signUp(){
         render();
     }
 
+    /**
+     *
+     * @param username
+     * @param password
+     * @param conf_password
+     * @param personne
+     * @throws Throwable
+     */
     public static void createAccount(@Required String username, @Required String password, @Required String conf_password, @Required String personne) throws Throwable {
         // Check tokens
         Boolean conforme = false;
@@ -38,24 +49,48 @@ public class Account extends CRUD {
         Application.index();
     }
 
+    /**
+     *
+     * @param a
+     * @return
+     */
     private static boolean lengthMax(String a){
         if(a.length() > 8)
             return true;
         return false;
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     private static boolean sameWord(String a, String b){
         if(a.equals(b))
             return true;
         return false;
     }
 
+    /**
+     *
+     * @param a
+     * @param b
+     * @return
+     */
     private static boolean correctWord(String a, String b){
         if(lengthMax(a) || sameWord(a,b) || lengthMax(b))
             return true;
         return false;
     }
 
+    /**
+     *
+     * @param m
+     * @param args
+     * @return
+     * @throws Throwable
+     */
     private static Object invoke(String m, Object... args) throws Throwable {
 
         try {
@@ -65,8 +100,5 @@ public class Account extends CRUD {
         }
     }
 
-private int pop(){
-        return 0;
-}
 
 }

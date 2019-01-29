@@ -13,7 +13,9 @@ import java.util.List;
 @Table(name = "compte" )
 public class CompteUtilisateur extends ElisisModel {
 
-
+    /**
+     *
+     */
     @Column(name = "email_compte", unique = true, nullable = false)
     public String email;
 
@@ -38,9 +40,14 @@ public class CompteUtilisateur extends ElisisModel {
     @ManyToOne
     public Utilisateur utilisateurs;
 
+    /**
+     *
+     * @param email_Compte
+     * @param mot_de_Passe
+     * @return true if user compte exist
+     */
     public static boolean connect(String email_Compte, String mot_de_Passe) {
-        //TODO reverifier les paramettres de la fonction
-        return find("byEmailAndPassword", email_Compte, mot_de_Passe).first();
+        return find("byEmailAndPassword", email_Compte, mot_de_Passe).first() != null;
     }
 
 
@@ -49,6 +56,12 @@ public class CompteUtilisateur extends ElisisModel {
         return "COMPT";
     }
 
+    /**
+     *
+     * @param email_Compte
+     * @param mot_de_Passe
+     * @param status
+     */
     public CompteUtilisateur(@Required String email_Compte,@Required String mot_de_Passe, boolean status) {
         this.email = email_Compte;
         this.mot_de_Passe = mot_de_Passe;

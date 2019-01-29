@@ -3,164 +3,27 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="2306.5" y="341.0">models.utilisateurs.Profession</node>
-    <node x="2003.0" y="424.0">models.utilisateurs.CompteUtilisateur</node>
-    <node x="826.0" y="141.0">models.utilisateurs.Note</node>
-    <node x="2969.5" y="86.0">models.utilisateurs.Utilisateur</node>
-    <node x="1089.0" y="141.0">models.utilisateurs.Parent</node>
-    <node x="394.0" y="1348.0">models.utilisateurs.Enseignant</node>
-    <node x="1230.5" y="1632.0">models.utilisateurs.Diplome</node>
-    <node x="3339.5" y="75.0">models.utilisateurs.Etablissement</node>
-    <node x="722.5" y="1599.0">models.utilisateurs.Parcours</node>
-    <node x="1079.0" y="1872.0">models.utilisateurs.Certificat</node>
-    <node x="1629.0" y="781.0">models.utilisateurs.Gallerie</node>
-    <node x="108.0" y="1770.0">models.utilisateurs.Competence</node>
-    <node x="1449.0" y="1101.0">models.utilisateurs.Apprenant</node>
-    <node x="2572.0" y="341.0">models.utilisateurs.Categorie</node>
-    <node x="80.0" y="1581.0">models.utilisateurs.Matiere</node>
+    <node x="233.0" y="709.0">models.utilisateurs.Profession</node>
+    <node x="795.0" y="546.0">models.utilisateurs.Enseigner</node>
+    <node x="0.0" y="709.0">models.utilisateurs.Note</node>
+    <node x="0.0" y="0.0">models.utilisateurs.CompteUtilisateur</node>
+    <node x="279.0" y="0.0">models.utilisateurs.Utilisateur</node>
+    <node x="267.0" y="546.0">models.utilisateurs.Parent</node>
+    <node x="0.0" y="317.0">models.utilisateurs.Enseignant</node>
+    <node x="0.0" y="872.0">models.utilisateurs.Diplome</node>
+    <node x="625.0" y="0.0">models.utilisateurs.Etablissement</node>
+    <node x="224.0" y="872.0">models.utilisateurs.Certificat</node>
+    <node x="297.0" y="317.0">models.utilisateurs.Parcours</node>
+    <node x="675.0" y="709.0">models.utilisateurs.Gallerie</node>
+    <node x="465.0" y="709.0">models.utilisateurs.Competence</node>
+    <node x="0.0" y="546.0">models.utilisateurs.Apprenant</node>
+    <node x="534.0" y="546.0">models.utilisateurs.Categorie</node>
+    <node x="577.0" y="317.0">models.utilisateurs.Matiere</node>
   </nodes>
   <notes />
-  <edges>
-    <edge source="models.utilisateurs.Parent" target="models.utilisateurs.Utilisateur">
-      <point x="111.0" y="0.0" />
-      <point x="-150.5" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Enseignant" target="models.utilisateurs.Utilisateur">
-      <point x="126.0" y="-16.0" />
-      <point x="3120.0" y="1424.0" />
-      <point x="0.0" y="114.0" />
-    </edge>
-    <edge source="models.utilisateurs.Enseignant" target="models.utilisateurs.Note">
-      <point x="0.0" y="-92.0" />
-      <point x="520.0" y="200.0" />
-      <point x="-94.0" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Categorie" target="models.utilisateurs.Profession">
-      <point x="-108.0" y="0.0" />
-      <point x="93.5" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Categorie" target="models.utilisateurs.Utilisateur">
-      <point x="108.0" y="0.0" />
-      <point x="3000.0" y="400.0" />
-      <point x="-120.0" y="114.0" />
-    </edge>
-    <edge source="models.utilisateurs.Matiere" target="models.utilisateurs.Competence">
-      <point x="0.0" y="59.0" />
-      <point x="0.0" y="-70.0" />
-    </edge>
-    <edge source="models.utilisateurs.Parent" target="models.utilisateurs.Enseignant">
-      <point x="-40.0" y="59.0" />
-      <point x="1160.0" y="1384.0" />
-      <point x="126.0" y="-56.0" />
-    </edge>
-    <edge source="models.utilisateurs.CompteUtilisateur" target="models.utilisateurs.Gallerie">
-      <point x="0.0" y="136.0" />
-      <point x="2120.0" y="960.0" />
-      <point x="1760.0" y="960.0" />
-      <point x="0.0" y="59.0" />
-    </edge>
-    <edge source="models.utilisateurs.Enseignant" target="models.utilisateurs.Etablissement">
-      <point x="126.0" y="0.0" />
-      <point x="3600.0" y="1440.0" />
-      <point x="3600.0" y="200.0" />
-      <point x="100.5" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Apprenant" target="models.utilisateurs.Utilisateur">
-      <point x="0.0" y="-59.0" />
-      <point x="1560.0" y="1040.0" />
-      <point x="3080.0" y="1040.0" />
-      <point x="-40.0" y="114.0" />
-    </edge>
-    <edge source="models.utilisateurs.Apprenant" target="models.utilisateurs.Enseignant">
-      <point x="111.0" y="20.0" />
-      <point x="1760.0" y="1180.0" />
-      <point x="1760.0" y="1408.0" />
-      <point x="126.0" y="-32.0" />
-    </edge>
-    <edge source="models.utilisateurs.CompteUtilisateur" target="models.utilisateurs.Utilisateur">
-      <point x="117.0" y="0.0" />
-      <point x="3040.0" y="560.0" />
-      <point x="-80.0" y="114.0" />
-    </edge>
-    <edge source="models.utilisateurs.Apprenant" target="models.utilisateurs.Parent">
-      <point x="-111.0" y="-20.0" />
-      <point x="1360.0" y="1140.0" />
-      <point x="1360.0" y="240.0" />
-      <point x="111.0" y="40.0" />
-    </edge>
-    <edge source="models.utilisateurs.Note" target="models.utilisateurs.Parent">
-      <point x="0.0" y="-59.0" />
-      <point x="920.0" y="80.0" />
-      <point x="1160.0" y="80.0" />
-      <point x="-40.0" y="-59.0" />
-    </edge>
-    <edge source="models.utilisateurs.Note" target="models.utilisateurs.Enseignant">
-      <point x="-94.0" y="40.0" />
-      <point x="760.0" y="240.0" />
-      <point x="760.0" y="1368.0" />
-      <point x="126.0" y="-72.0" />
-    </edge>
-    <edge source="models.utilisateurs.Etablissement" target="models.utilisateurs.Utilisateur">
-      <point x="-100.5" y="0.0" />
-      <point x="150.5" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Competence" target="models.utilisateurs.Matiere">
-      <point x="-92.0" y="0.0" />
-      <point x="40.0" y="1840.0" />
-      <point x="40.0" y="1680.0" />
-      <point x="-120.0" y="40.0" />
-    </edge>
-    <edge source="models.utilisateurs.Enseignant" target="models.utilisateurs.Apprenant">
-      <point x="126.0" y="-48.0" />
-      <point x="1560.0" y="1392.0" />
-      <point x="0.0" y="59.0" />
-    </edge>
-    <edge source="models.utilisateurs.Parent" target="models.utilisateurs.Apprenant">
-      <point x="111.0" y="26.666666666666657" />
-      <point x="1400.0" y="226.66666666666666" />
-      <point x="1400.0" y="1120.0" />
-      <point x="-111.0" y="-40.0" />
-    </edge>
-    <edge source="models.utilisateurs.Parcours" target="models.utilisateurs.Diplome">
-      <point x="117.5" y="0.0" />
-      <point x="-89.5" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Enseignant" target="models.utilisateurs.Matiere">
-      <point x="-126.0" y="0.0" />
-      <point x="200.0" y="1440.0" />
-      <point x="0.0" y="-59.0" />
-    </edge>
-    <edge source="models.utilisateurs.Utilisateur" target="models.utilisateurs.CompteUtilisateur">
-      <point x="-150.5" y="40.0" />
-      <point x="2120.0" y="240.0" />
-      <point x="0.0" y="-136.0" />
-    </edge>
-    <edge source="models.utilisateurs.Enseignant" target="models.utilisateurs.Parcours">
-      <point x="0.0" y="92.0" />
-      <point x="520.0" y="1680.0" />
-      <point x="-117.5" y="0.0" />
-    </edge>
-    <edge source="models.utilisateurs.Gallerie" target="models.utilisateurs.CompteUtilisateur">
-      <point x="131.0" y="0.0" />
-      <point x="2080.0" y="840.0" />
-      <point x="-40.0" y="136.0" />
-    </edge>
-    <edge source="models.utilisateurs.Parcours" target="models.utilisateurs.Certificat">
-      <point x="117.5" y="40.0" />
-      <point x="1160.0" y="1720.0" />
-      <point x="0.0" y="-48.0" />
-    </edge>
-    <edge source="models.utilisateurs.Profession" target="models.utilisateurs.Categorie">
-      <point x="0.0" y="-59.0" />
-      <point x="2400.0" y="280.0" />
-      <point x="2680.0" y="280.0" />
-      <point x="0.0" y="-59.0" />
-    </edge>
-  </edges>
-  <settings layout="Hierarchic Group" zoom="0.9205426356589146" x="1254.0" y="1945.0568421052633" />
-  <SelectedNodes>
-    <node>models.utilisateurs.Matiere</node>
-  </SelectedNodes>
+  <edges />
+  <settings layout="Hierarchic Group" zoom="0.33788598574821854" x="710.0" y="832.0" />
+  <SelectedNodes />
   <Categories>
     <Category>Fields</Category>
     <Category>Methods</Category>

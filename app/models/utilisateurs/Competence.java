@@ -16,8 +16,6 @@ public class Competence extends ElisisModel {
     @Column(name = "description_competance",nullable = false)
     public String descriptioin;
 
-    @Column(nullable = false, updatable = false)
-    private Calendar date_edition;
 
     @ManyToOne(cascade = CascadeType.ALL)
     public Matiere matiere;
@@ -25,51 +23,14 @@ public class Competence extends ElisisModel {
     public Competence(String libelle, String descriptioin ) {
         this.libelle = libelle;
         this.descriptioin = descriptioin;
-        this.date_edition = new Calendar() {
-            @Override
-            protected void computeTime() {
-
-            }
-
-            @Override
-            protected void computeFields() {
-
-            }
-
-            @Override
-            public void add(int field, int amount) {
-
-            }
-
-            @Override
-            public void roll(int field, boolean up) {
-
-            }
-
-            @Override
-            public int getMinimum(int field) {
-                return 0;
-            }
-
-            @Override
-            public int getMaximum(int field) {
-                return 0;
-            }
-
-            @Override
-            public int getGreatestMinimum(int field) {
-                return 0;
-            }
-
-            @Override
-            public int getLeastMaximum(int field) {
-                return 0;
-            }
-        };
+        edit_date();
+        setCode();
     }
+
+
 
     @Override
     public String abbvr() {
-        return null;
+        return "COMPET";
     }
 }

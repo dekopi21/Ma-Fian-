@@ -15,13 +15,10 @@ public class Apprenant extends ElisisModel {
     @ManyToOne
     public Parent parent;
 
-    @OneToMany
-    public List<Enseignant> enseignant;
 
     public Apprenant(Parent parent, Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
         this.parent = parent;
-        this.enseignant = new ArrayList<Enseignant>();
         setCode();
         edit_date();
     }
