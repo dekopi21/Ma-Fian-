@@ -19,6 +19,11 @@ public class Diplome extends ElisisModel {
     @Column(unique = true, nullable = false,name = "Description_Diplome")
     public String description;
 
+    /**
+     *
+     * @param libelleDiplome
+     * @param description
+     */
     public Diplome(String libelleDiplome, String description) {
         this.libelleDiplome = libelleDiplome;
         this.description = description;

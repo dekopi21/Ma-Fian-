@@ -20,6 +20,11 @@ public class Competence extends ElisisModel {
     @ManyToOne(cascade = CascadeType.ALL)
     public Matiere matiere;
 
+    /**
+     *
+     * @param libelle
+     * @param descriptioin
+     */
     public Competence(String libelle, String descriptioin ) {
         this.libelle = libelle;
         this.descriptioin = descriptioin;

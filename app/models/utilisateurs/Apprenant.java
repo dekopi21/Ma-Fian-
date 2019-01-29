@@ -15,7 +15,11 @@ public class Apprenant extends ElisisModel {
     @ManyToOne
     public Parent parent;
 
-
+    /**
+     *
+     * @param parent
+     * @param utilisateur
+     */
     public Apprenant(Parent parent, Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
         this.parent = parent;
@@ -23,6 +27,10 @@ public class Apprenant extends ElisisModel {
         edit_date();
     }
 
+    /**
+     *
+     * @return String, the generation index of code
+     */
     @Override
     public String abbvr() {
         return "APPRE";

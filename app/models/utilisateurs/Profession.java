@@ -15,55 +15,17 @@ public class Profession extends ElisisModel {
     @Column(name = "libelle_profession", nullable = false, unique = true)
     public String libelle;
 
-    @Column(nullable = false, updatable = false)
-    public Calendar date_editioin;
     @OneToOne
     public Categorie categorie;
 
+    /**
+     *
+     * @param libelleProfession
+     */
     public Profession(String libelleProfession) {
         this.libelle = libelleProfession;
-        this.date_editioin = new Calendar() {
-            @Override
-            protected void computeTime() {
-
-            }
-
-            @Override
-            protected void computeFields() {
-
-            }
-
-            @Override
-            public void add(int field, int amount) {
-
-            }
-
-            @Override
-            public void roll(int field, boolean up) {
-
-            }
-
-            @Override
-            public int getMinimum(int field) {
-                return 0;
-            }
-
-            @Override
-            public int getMaximum(int field) {
-                return 0;
-            }
-
-            @Override
-            public int getGreatestMinimum(int field) {
-                return 0;
-            }
-
-            @Override
-            public int getLeastMaximum(int field) {
-                return 0;
-            }
-        };
         setCode();
+        edit_date();
     }
 
     @Override

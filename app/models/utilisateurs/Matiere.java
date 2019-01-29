@@ -24,6 +24,10 @@ public class Matiere extends ElisisModel {
         return "MATIERE";
     }
 
+    /**
+     *
+     * @param libelle
+     */
     public Matiere(String libelle) {
         this.libelle = libelle;
         this.competence = new ArrayList<Competence>();

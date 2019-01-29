@@ -21,10 +21,15 @@ public class Categorie extends ElisisModel {
     @OneToOne
     public Profession profession;
 
+    /**
+     *
+     * @param nomCategorie
+     */
     public Categorie(String nomCategorie) {
         this.libelle = nomCategorie;
         this.utilisateurs = new ArrayList<Utilisateur>();
         setCode();
+        edit_date();
     }
 
     @Override

@@ -24,6 +24,12 @@ public class Note extends ElisisModel {
         return null;
     }
 
+    /**
+     *
+     * @param note
+     * @param enseignant
+     * @param parent
+     */
     public Note(double note, Enseignant enseignant, Parent parent) {
         this.note = note;
         this.enseignant = enseignant;

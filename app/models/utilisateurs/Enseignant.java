@@ -27,6 +27,10 @@ public class Enseignant extends ElisisModel {
     @OneToMany
     public List<Note> note;
 
+    /**
+     *
+     * @param utilisateur
+     */
     public Enseignant(Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
         this.parcours = new ArrayList<Parcours>();

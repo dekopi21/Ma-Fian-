@@ -21,6 +21,10 @@ public class Parent extends ElisisModel {
     @OneToMany
     public List<Enseignant> enseignant;
 
+    /**
+     *
+     * @param utilisateur
+     */
     public Parent(Utilisateur utilisateur) {
         this.utilisateur = utilisateur;
         this.apprenant = new ArrayList<Apprenant>();

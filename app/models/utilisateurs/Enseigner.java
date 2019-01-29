@@ -21,6 +21,11 @@ public class Enseigner extends ElisisModel {
     @OneToMany
     public List<Matiere> matieres;
 
+    /**
+     *
+     * @param enseignant
+     * @param apprenant
+     */
     public Enseigner(Enseignant enseignant, Apprenant apprenant) {
         this.enseignant = enseignant;
         this.apprenant = apprenant;

@@ -41,7 +41,14 @@ public class Etablissement extends ElisisModel {
     @ManyToOne(cascade = CascadeType.ALL)
     public Utilisateur utilisateur;
 
-
+    /**
+     *
+     * @param nomEtablissement
+     * @param adresse
+     * @param dateDebut
+     * @param dateFin
+     * @param frequente
+     */
     public Etablissement(String nomEtablissement, String adresse, Calendar dateDebut, Calendar dateFin, boolean frequente) {
         this.nomEtablissement = nomEtablissement;
         this.adresse = adresse;
@@ -54,6 +61,13 @@ public class Etablissement extends ElisisModel {
         edit_date();
     }
 
+    /**
+     *
+     * @param nomEtablissement
+     * @param adresse
+     * @param dateDebut
+     * @param frequente
+     */
     public Etablissement(String nomEtablissement, String adresse, Calendar dateDebut, boolean frequente) {
         this.nomEtablissement = nomEtablissement;
         this.adresse = adresse;

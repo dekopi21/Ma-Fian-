@@ -18,6 +18,10 @@ public class Gallerie extends ElisisModel {
     @ManyToOne
     public CompteUtilisateur compteUtilisateur;
 
+    /**
+     *
+     * @param nomCompletImage
+     */
     public Gallerie(String nomCompletImage) {
         this.nomCompletImage = nomCompletImage;
         setCode();

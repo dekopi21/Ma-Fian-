@@ -29,6 +29,11 @@ public class Parcours extends ElisisModel {
     @Column(name = "qualification", nullable = false)
     public int qualification;
 
+    /**
+     *
+     * @param optententionDiplome
+     * @param optentionCertificat
+     */
     public Parcours( Calendar optententionDiplome,  Calendar optentionCertificat) {
         this.diplomes = new ArrayList<Diplome>();
         OptententionDiplome = optententionDiplome;

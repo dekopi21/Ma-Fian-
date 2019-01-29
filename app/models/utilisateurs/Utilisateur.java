@@ -37,7 +37,16 @@ public class Utilisateur extends ElisisModel {
     @OneToMany(cascade = CascadeType.ALL)
     public List<CompteUtilisateur> compteUtilisateurs;
 
-
+    /**
+     *
+     * @param nom
+     * @param prenom
+     * @param domicile
+     * @param sexe
+     * @param dateNaissance
+     * @param numeroTelephone
+     * @param numeroIdentide
+     */
     public Utilisateur(String nom, String prenom,String domicile, char sexe, Calendar dateNaissance, String numeroTelephone, String numeroIdentide) {
         // verifier si l'utilisateur poccede moins de (2) comptes
         //  verifier si les comptes sont differents a la création d'un nouveau compte
@@ -55,6 +64,6 @@ public class Utilisateur extends ElisisModel {
 
     @Override
     public String abbvr() {
-        return "UTILIS";
+        return "UTILI";
     }
 }
