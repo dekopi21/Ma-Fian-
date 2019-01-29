@@ -1,7 +1,7 @@
 package controllers;
 
+import controllers.elisisplay.crypto.Crypto;
 import models.utilisateurs.CompteUtilisateur;
-import org.bouncycastle.cert.ocsp.Req;
 import play.data.validation.Required;
 import play.utils.Java;
 
@@ -27,7 +27,7 @@ public class Account extends CRUD {
     public static void createAccount(@Required String username, @Required String password, @Required String conf_password, @Required String personne) throws Throwable {
         // Check tokens
 
-        if(validation.hasErrors() || correctWord(password, conf_password )) {
+        if(validation.hasErrors() || !correctWord(password, conf_password)) {
             flash.keep("url");
             flash.error("secure.error");
             params.flash();
@@ -36,14 +36,14 @@ public class Account extends CRUD {
         // Mark user as connected
         session.put("username", username);
         if(personne.equals("teacher")){
-            new CompteUtilisateur(username,password,true).save();
+            new CompteUtilisateur(username, Crypto.hexMD5(password),true).save();
             //default remember is true
-            Secure.authenticate(username,password,true);
+            Secure.authenticate(username,Crypto.hexMD5(password),false);
         }
         else
             if(personne.equals("parent")){
-                new CompteUtilisateur(username,password,false).save();
-                Secure.authenticate(username,password,true);
+                new CompteUtilisateur(username,Crypto.hexMD5(password),false).save();
+                Secure.authenticate(username, Crypto.hexMD5(password),false);
             }
 
         // Remember if needed
@@ -82,7 +82,7 @@ public class Account extends CRUD {
      * @return
      */
     private static boolean correctWord(@Required String a, @Required String b){
-        if(lengthMax(a) || sameWord(a,b) || lengthMax(b))
+        if(lengthMax(a) || sameWord(a, b) || lengthMax(b))
             return true;
         return false;
     }

@@ -154,4 +154,102 @@ public class CompteUtilisateur extends ElisisModel {
         setCode();
         edit_date();
     }
+
+    /**
+     *
+     * @param email_Compte
+     * @param mot_de_Passe
+     */
+    public CompteUtilisateur(@Required String email_Compte,@Required String mot_de_Passe) {
+        this.email = email_Compte;
+        this.mot_de_Passe = mot_de_Passe;
+        this.isTeacher = false;
+        this.isParent = false;
+        this.isAdmin = true;
+        this.galleries = new ArrayList<Gallerie>();
+        this.dateUpdate = new Calendar() {
+            @Override
+            protected void computeTime() {
+
+            }
+
+            @Override
+            protected void computeFields() {
+
+            }
+
+            @Override
+            public void add(int field, int amount) {
+
+            }
+
+            @Override
+            public void roll(int field, boolean up) {
+
+            }
+
+            @Override
+            public int getMinimum(int field) {
+                return 0;
+            }
+
+            @Override
+            public int getMaximum(int field) {
+                return 0;
+            }
+
+            @Override
+            public int getGreatestMinimum(int field) {
+                return 0;
+            }
+
+            @Override
+            public int getLeastMaximum(int field) {
+                return 0;
+            }
+        };
+        this.date_connexion = new Calendar() {
+            @Override
+            protected void computeTime() {
+
+            }
+
+            @Override
+            protected void computeFields() {
+
+            }
+
+            @Override
+            public void add(int field, int amount) {
+
+            }
+
+            @Override
+            public void roll(int field, boolean up) {
+
+            }
+
+            @Override
+            public int getMinimum(int field) {
+                return 0;
+            }
+
+            @Override
+            public int getMaximum(int field) {
+                return 0;
+            }
+
+            @Override
+            public int getGreatestMinimum(int field) {
+                return 0;
+            }
+
+            @Override
+            public int getLeastMaximum(int field) {
+                return 0;
+            }
+        };
+        setCode();
+        edit_date();
+    }
 }
